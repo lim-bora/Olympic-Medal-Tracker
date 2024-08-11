@@ -1,6 +1,5 @@
 import React, { useState } from 'react'
 
-//공통부분은 이렇게 템플릿?을 만들 수 있음
 //버튼 컴포넌트
 const Button = ({ text, onClick }) => {
     return <button onClick={onClick}>{text}</button>;
@@ -16,20 +15,13 @@ const Rating = ({ text }) => {
 
 
 
-const CountInput = ({id, onCreate, onCheck, onUpdate}) => {
+const CountInput = ({id, onCreate, onCheck, onName, onUpdate}) => {
 
     const [name, setName] = useState("");
     const [goldCount, setGoldCount] = useState(0);
     const [silverCount, setSilverCount] = useState(0);
     const [bronzeCount, setBronzeCount] = useState(0);
 
-    //데이터 적었을때 호출될 함수
-    // const onChangeData = (e) => {
-    //     setName(e.target.value);
-    //     setGoldCount(e.target.value);
-    //     setSilverCount(e.target.value);
-    //     setBronzeCount(e.target.value);
-    // }
     const onChangeName = (e) => {
         setName(e.target.value);
     }
@@ -54,20 +46,18 @@ const CountInput = ({id, onCreate, onCheck, onUpdate}) => {
         setBronzeCount(0)
 
         //인자로 받은값들 onCreate생성함수에 전달
-        onCreate(
-            {
+        onCreate({
                 name : name,
                 gold : goldCount,
                 silver : silverCount,
                 bronze : bronzeCount,
-            }
-        ) 
+        }) 
 
         onCheck(id)
     }
 
     const onClickUpdate = () => {
-        onUpdate(id)
+        onUpdate(name,goldCount, silverCount, bronzeCount)
     }
 
     return(

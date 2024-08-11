@@ -54,9 +54,19 @@ const App = () => {
   }
 
   //업데이트 : 보수중
-  const onUpdate = (targetId, newData) => {
+  const onUpdate = (targetName, updateGold, updateSilver, updateBronze) => { 
     console.log('업데이트');
-    // setData(data.map((list) => (list.id === targetId ? {...list, ...newData} : list)));
+    setData(data.map((list) => { // data State의 값들 중 targetName과 일치하는 name을 갖는 리스트 아이템 값씌우기
+      if(list.name === targetName){
+        return { //조건부함시 
+          ...list, //기존 아이템들 그대로 펼치고,
+          gold : updateGold,
+          silver : updateSilver,
+          bronze : updateBronze,
+        }
+      }
+      return list; //조건 부합하지않아도 -> 변환되지않은 객체를 반환(기존객체)
+    }));
   };
   
 
