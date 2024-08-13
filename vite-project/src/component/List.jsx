@@ -1,7 +1,6 @@
 import React from 'react'
 import ListItem from './ListItem.jsx';
 
-
 const List = ({data, onDelete, onUpdate}) => {
     return(
         <ul className='list-field'>
@@ -15,7 +14,9 @@ const List = ({data, onDelete, onUpdate}) => {
                 </ul>
             </div>
 
-            {data.map((country) => ( //현재 리스트된 데이터기준 새로운배열을 계속 세팅
+            {data.length === 0 ? (
+                <h3>아직 추가된 국가가 없습니다. 메달을 추가하세요!</h3>
+            ) : (data.map((country) => ( //현재 리스트된 데이터기준 새로운배열을 계속 세팅
             <ListItem 
                 key={country.id}  //키가 필수로 있어야한다. 해당 고유아이디를 넣어준다
                 name={country.name} 
@@ -26,7 +27,8 @@ const List = ({data, onDelete, onUpdate}) => {
                 onDelete={onDelete}
                 onUpdate={onUpdate}
                 />
-            ))}
+             ))
+            )}
         </ul>
     )
 }

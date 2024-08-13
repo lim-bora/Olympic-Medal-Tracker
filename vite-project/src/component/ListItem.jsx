@@ -1,6 +1,6 @@
 import React from 'react'
 
-const ListItem = ({id,name, gold, silver, bronze, onDelete}) => {
+const ListItem = ({id,name, gold, silver, bronze, onDelete}) => { 
     //삭제 이벤트
     const onClickDelete = () => {
         onDelete(id);
