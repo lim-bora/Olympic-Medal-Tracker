@@ -24,7 +24,7 @@
 #### 2.메달 집계 CRUD 구현하기
 <details>
     <summary>추가(Create)</summary>
-- 새로운 나라와 그 나라가 획득한 메달 수 입력값 전달받아 데이터 추가
+- 새로운 나라와 그 나라가 획득한 메달 수 입력값 전달받아 데이터 추가<br/>
 - 기존에 추가된 나라 데이터가 있으면 중복처리
 </details>
 <details>
@@ -33,7 +33,7 @@
 </details>
 <details>
     <summary>업데이트(Update)</summary>
-- 기존에 추가된 나라의 메달 수를 수정
+- 기존에 추가된 나라의 메달 수를 수정<br/>
 - 새로운 데이터 입력 후 업데이트 클릭시 예외처리
 </details>
 <details>
