@@ -25,11 +25,13 @@
 <details>
     <summary>추가(Create)</summary>
 - 새로운 나라와 그 나라가 획득한 메달 수 입력값 전달받아 데이터 추가<br/>
-- 기존에 추가된 나라 데이터가 있으면 중복처리
+- 기존에 추가된 나라 데이터가 있으면 중복처리<br/>
+- 추가 후 입력란 모두 리셋
 </details>
 <details>
     <summary>읽기(Read)</summary>
-- 나라별 메달 집계 리스트 표출
+- 나라별 메달 집계 리스트 표출<br/>
+- 내림차순 정렬
 </details>
 <details>
     <summary>업데이트(Update)</summary>
