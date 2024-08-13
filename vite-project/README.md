@@ -1,21 +1,41 @@
-# React + Vite
+# Olympic Medal Tracker 만들기
+스파르타 내배캠 리엑트 1주차 개인과제
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## 🖥️ 프로젝트 소개
+2024 파리 올림픽에서 각 나라가 획득한 메달 수를 추적하는 Olympic Medal Tracker 입니다.
 
-Currently, two official plugins are available:
+## 🕰️ 개발 기간
+* 24.08.09일 - 24.08.13일 (5일 소요)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### ⚙️ 개발 환경
+- `React vite`
+
+### 📌 레이아웃 구조
+- App.jsx ( 최상단 컴포넌트 )
+- CountInput.jsx ( 국가이름, 메달수 입력, 추가 및 업데이트 버튼 컴포넌트 )
+- List.jsx ( 추가된 국가리스트들이 보이는곳 )
+- ListItem.jsx ( 리스트 각각의 아이템 )
+
+## 📌 주요 기능
+#### 제출 폼 UI 구현하기
+- 기능별 컴포넌트 분리(부모 ,입력폼 ,리스트화면 ,리스트아이템)
+- prop으로 연결
+
+#### 메달 집계 CRUD 구현하기
+##추가(Create)
+- 새로운 나라와 그 나라가 획득한 메달 수 입력값 전달받아 데이터 추가
+- 기존에 추가된 나라 데이터가 있으면 중복처리
+##읽기(Read)
+- 나라별 메달 집계 리스트 표출
+##업데이트(Update)
+- 기존에 추가된 나라의 메달 수를 수정
+- 새로운 데이터 입력 후 업데이트 클릭시 예외처리
+##삭제(Delete)
+- 선택한 나라 정보를 삭제
 
 
-<h1>Olympic Medal Tracker 만들기</h1>
-<p>2024 파리 올림픽에서 각 나라가 획득한 메달 수를 추적하는 Olympic Medal Tracker 입니다.</p>
-
-
-1. 제출 폼 UI 구현하기
-2. 메달 집계 CRUD 구현하기
-<li>Create: 새로운 나라와 그 나라가 획득한 메달 수를 추가합니다.</li>
-<li>Read: 나라별 메달 집계 리스트를 보여줍니다.</li>
-<li>Update: 기존에 추가된 나라의 메달 수를 수정할 수 있습니다.</li>
-<li>Delete: 나라 정보를 삭제할 수 있습니다.</li>
-
+## 어려웠던점
+- prop개념을 이해하는게 어려웠다. 
+- js는 변수로 호출하여 쓰는방식이있는데, React는 state로 상태를 저장하여 주고받으며 쓰는방식이다보니 주고 받는 방식에서 햇갈렸다.
+- 객체를 활용하는 부분에서 구조와 전달방식에서 개념이 확실하게 잡혀있지않아 구글링을 많이 하였다.
+- 컴포넌트생성부터 이벤트생성 기능생성 등 연결하는 과정에서 만드는 순서가 어렵다. 
