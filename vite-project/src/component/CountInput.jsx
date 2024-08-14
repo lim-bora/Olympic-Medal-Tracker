@@ -30,19 +30,19 @@ const CountInput = ({data, onCreate, onUpdate}) => {
         setName(e.target.value);
     }
     const onChangeGoldCount = (e) => {
-        setGoldCount(Number(e.target.value));  //숫자는 넘버로 바꿔주기
+        setGoldCount(+e.target.value);  //숫자는 넘버로 바꿔주기
     }
     const onChangeSilverCount = (e) => {
-        setSilverCount(Number(e.target.value));
+        setSilverCount(+e.target.value);
     }
     const onChangeBronzeCount = (e) => {
-        setBronzeCount(Number(e.target.value));
+        setBronzeCount(+e.target.value);
     }
 
 
     //국가추가 버튼 클릭시 실행되는 함수
     const onSubmit = (e) => {
-        e.preventDefault();
+        e.preventDefault(); // 
 
         //국가이름에 값이 없을때 포커스되게
         if(name === ''){

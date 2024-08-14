@@ -29,7 +29,7 @@ const App = () => {
   const onCreate = ({name, gold, silver, bronze})=>{
       const newList = { //리스트별 저장될 데이터
         id : data.length +1,
-        name,
+        name, 
         gold,
         silver,
         bronze,
